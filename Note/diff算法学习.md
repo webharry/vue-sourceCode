@@ -1,9 +1,12 @@
 # diff算法学习笔记
 
 patch的核心算法diff
+
 1、同一层级的节点进行比较和操作，以最小操作步骤更新节点变化到真正的DOM树，所以算法复杂度是O(n)
+
 ![img](../img/new_Vnode.png)
 ![img](../img/newVnode.png)
+
 比较规则：
 1、如果是相同节点vnode，进行patchVnode操作，patchVnode操作后续会讲
 2、如果是服务端渲染节点插入到真正DOM树
@@ -233,7 +236,7 @@ oldStartIdx 指向 oldStartNode
 oldEndIdx 指向 oldEndNode
 newStartIdx 指向 newStartNode
 newEndIdx 指向 newEndNode
-![img][../img/1.png]
+![img](../img/1.png)
 
 在遍历过程中，如果存在key,且满足sameVnode，会将该DOM节点进行复用，否则会创建一个新的DOM节点
 
