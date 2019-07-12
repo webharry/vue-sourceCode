@@ -2,8 +2,8 @@
 
 patch的核心算法diff
 1、同一层级的节点进行比较和操作，以最小操作步骤更新节点变化到真正的DOM树，所以算法复杂度是O(n)
-![比较Vnode节点]("../img/new_Vnode.png")
-![比较Vnode节点]("../img/newVnode.png")
+![img](../img/new_Vnode.png)
+![img](../img/newVnode.png)
 比较规则：
 1、如果是相同节点vnode，进行patchVnode操作，patchVnode操作后续会讲
 2、如果是服务端渲染节点插入到真正DOM树
@@ -227,12 +227,13 @@ function patchVnode (
 
 
 updateChildren的核心算法
+
 1、首先在新旧两个节点的左右头尾两侧都有一个变量标记，在遍历过程中这几个变量会向中间靠拢，当oldStartIdx > oldEndIdx 或者 newStartIdx > newEndIdx时，结束循环
 oldStartIdx 指向 oldStartNode
 oldEndIdx 指向 oldEndNode
 newStartIdx 指向 newStartNode
 newEndIdx 指向 newEndNode
-(新旧节点下标标记)[../img/1.png]
+![img][../img/1.png]
 
 在遍历过程中，如果存在key,且满足sameVnode，会将该DOM节点进行复用，否则会创建一个新的DOM节点
 
