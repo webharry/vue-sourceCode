@@ -12,8 +12,7 @@
 
 ### 源码相关
 
-[Virtual DOM与diff算法实现](./Note/diff算法)
-
+[Virtual DOM与diff算法实现](./Note/diff算法学习.md)
 
 
 ## 关于作者
