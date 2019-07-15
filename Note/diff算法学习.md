@@ -8,7 +8,7 @@ patch的核心算法diff
 ![img](../img/newVnode.png)
 
 比较规则：
-1、如果是相同节点vnode，进行patchVnode操作，patchVnode操作后续会讲
+1、如果是相同节点vnode，进行patchVnode操作，patchVnode操作后续会讲  
 2、如果是服务端渲染节点插入到真正DOM树
 
 ```js
